@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="with=device=width, initial-scale=1.0">
+        <title>Sweet Honey</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+    <link media="all" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonym0us"></script>
+    </head>
+    <body>
+    <section class="sub-header">
+     <nav>
+        <a href="index.html"><img src="images/My project.png"></a>
+        <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+            
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">DESPRE</a></li>
+                <li><a href="blog.html">PRODUSE</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </div>
+        
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+            <img src="images/moon.png" id="icon">
+     </nav>
+
+     <h1>Contactează-ne</h1>
+    </section>
+
+<!-----Contact us-->
+<section class="location">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5540.239186553173!2d22.37733721011692!3d46.02876233708111!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x474f1aef75591443%3A0x351de42d0b2581dc!2zU2VsaciZdGU!5e0!3m2!1sen!2sro!4v1683543555777!5m2!1sen!2sro" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</section>
+
+<section class="contact-us">
+    <div class="row">
+        <div class="contact-col">
+            <div>
+                <i class="fa fa-home"></i>
+                <span>
+                    <h5>Nr. 96, str. Principală</h5>
+                    <p>Seliște, Petriș, Arad</p>
+                </span>
+            </div>
+            <div>
+                <i class="fa fa-phone"></i>
+                <span>
+                    <h5>+40 453628478</h5>
+                    <p> Luni-Sâmbătă, 10AM - 6PM</p>
+                </span>
+            </div>
+            <div>
+                <i class="fa fa-envelope-o"></i>
+                <span>
+                    <h5>mieredepetris@gmail.com</h5>
+                    <p>Ne poți scrie oricând un email</p>
+                </span>
+            </div>
+        </div>
+        <div class="contact-col">
+             <form>
+                <i class="fas fa-paper-plane"></i>
+                <div class="input-group">
+                    <label>Nume Prenume</label>
+                    <input type="text" placeholder="Numele tău" id="contact-name" onkeyup="validateName()" >
+                    <span id="name-error"></span>
+                </div>
+
+                <div class="input-group">
+                    <label>Telefon</label>
+                    <input type="tel" placeholder="073 456 7869" id="contact-phone" onkeyup="validatePhone()">
+                    <span id="phone-error"></span>
+              
+                </div>
+
+                <div class="input-group">
+                    <label>Email</label>
+                    <input type="email" placeholder="Adresa de Email"  id="contact-email" onkeyup="validateEmail()" >
+                    <span id="email-error"></span>
+              
+                </div>
+
+                <div class="input-group">
+                    <label>Mesajul Tău</label>
+                    <textarea rows="5" placeholder="Mesajul tău"  id="contact-message" onkeyup="validateMessage()" ></textarea>
+                    <span id="message-error"></span>
+              
+               </div>
+               <button onclick="return validateForm()">Trimite</button>
+               <span id="submit-error"></span>
+              
+                
+             </form>
+        </div>
+</section>
+
+
+
+
+<!---About us content-->
+
+
+
+    <!------stuff----->
+    
+<!-------Sortimente------->
+  
+<!--------Produse-->
+  
+
+    <!------testimoniale--------> 
+   
+  <!------- Call to Action ------->
+   
+
+ <!------- Footer ------->
+ <section class="footer">
+    <h4>Despre Noi</h4>
+    <p>Din pasiunea pentru creșterea albinelor am realizat produse de calitate, 100% bio și parfumat de gustoase. <br> Acest gust reprezintă "acasă",  Acasă la Petriș!  </p>
+<div class="icons">
+    <i class="fa fa-facebook"></i>
+    <i class="fa fa-twitter"></i>
+    <i class="fa fa-instagram"></i>
+    <i class="fa fa-linkedin"></i>
+
+</div> 
+<p>Made with <i class="fa fa-heart-o"></i> by Miere De Petriș</p>
+
+</section>
+
+
+
+    <!--------JavaScript for Toggle Menu --->
+    <script>
+        var navLinks=document.getElementById("navLinks");
+        function showMenu(){
+            navLinks.style.right = "0";
+
+        }
+        function hideMenu(){
+            navLinks.style.right="-200px";
+        }
+    </script>
+    <script  src="script.js"></script>
+    <script>
+        var icon= document.getElementById("icon");
+
+        icon.onclick = function(){
+            document.body.classList.toggle("dark-theme");
+            if(document.body.classList.contains("dark-theme")){
+                icon.src = "images/sun.png";
+            }
+            else 
+            {
+                icon.src = "images/moon.png";
+            }
+        }
+    </script>
+    </body>
+</html>

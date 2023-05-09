@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="with=device=width, initial-scale=1.0">
+        <title>Sweet Honey</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+    <link media="all" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    </head>
+    <body>
+    <section class="sub-header">
+     <nav>
+        <a href="index.html"><img src="images/My project.png"></a>
+        <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">DESPRE</a></li>
+                <li><a href="blog.html">PRODUSE</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+            <img src="images/moon.png" id="icon">
+     </nav>
+
+     <h1>Despre Noi</h1>
+    </section>
+
+
+<!---About us content-->
+
+<section class="about-us">
+    <div class="row">
+        <div class="about-col">
+            <h1>Producători de produse apicole din zona Petriș pe Mureș</h1>
+            <p>
+             Totul s-a născut din pasiunea de a studia lumea albinelor și îngrijirea acestora. 
+             Stupina noastră a început ușor, ușor să se mărească, astfel că putem oferi o gamă mai largă de produse apicole de calitate.
+             Familiile de albine sunt amplasate în zona Comunei Petriș, jud. Arad, un loc ce respiră tradiții și obiceiuri;
+             Meșteșugul apiculturii s-a transmis de la o generație la alta și iată că acum ne putem bucura de o muncă mai ușoară decât bunicii noștri, fiind ajutați de noi tehnologii care ușurează storsul mierii sau recoltarea polenului. <br>
+             Mierea de Petriș este o miere parfumată, o miere cu gust natural și făurită cu dragoste și grijă!
+            </p>
+            <a href="blog.html" class="hero-btn red-btn">Explorează</a>
+        </div>
+        <div class="about-col">
+            <img src="images/home.jpg">
+        </div>
+    </div>
+
+</section>
+
+
+    <!------stuff----->
+    
+<!-------Sortimente------->
+  
+<!--------Produse-->
+  
+
+    <!------testimoniale--------> 
+   
+  <!------- Call to Action ------->
+   
+
+ <!------- Footer ------->
+ <section class="footer">
+    <h4>Despre Noi</h4>
+    <p>Din pasiunea pentru creșterea albinelor am realizat produse de calitate, 100% bio și parfumat de gustoase. <br> Acest gust reprezintă "acasă",  Acasă la Petriș!  </p>
+<div class="icons">
+    <i class="fa fa-facebook"></i>
+    <i class="fa fa-twitter"></i>
+    <i class="fa fa-instagram"></i>
+    <i class="fa fa-linkedin"></i>
+
+</div> 
+<p>Made with <i class="fa fa-heart-o"></i> by Miere De Petriș</p>
+
+</section>
+
+
+
+    <!--------JavaScript for Toggle Menu --->
+    <script>
+        var navLinks=document.getElementById("navLinks");
+        function showMenu(){
+            navLinks.style.right = "0";
+
+        }
+        function hideMenu(){
+            navLinks.style.right="-200px";
+        }
+    </script>
+    <script>
+        var icon= document.getElementById("icon");
+
+        icon.onclick = function(){
+            document.body.classList.toggle("dark-theme");
+            if(document.body.classList.contains("dark-theme")){
+                icon.src = "images/sun.png";
+            }
+            else 
+            {
+                icon.src = "images/moon.png";
+            }
+        }
+    </script>
+    </body>
+</html>

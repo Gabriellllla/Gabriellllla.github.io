@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="with=device=width, initial-scale=1.0">
+        <title>Sweet Honey</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+    <link media="all" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    </head>
+    <body>
+    <section class="sub-header">
+     <nav>
+        <a href="index.html"><img src="images/My project.png"></a>
+        <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">DESPRE</a></li>
+                <li><a href="blog.html">PRODUSE</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+            <img src="images/moon.png" id="icon">
+     </nav>
+
+     <h1>Sortimente Alese</h1>
+    </section>
+
+    <section class="produse">
+        <h1>Dulci, Sănătoase și Naturale</h1>
+        <p>Toate fiind recoltate din stupina proprie</p>
+
+        <div class="row">
+           <div class="produse-col">
+                <img src="images/dulce1.jpeg">
+                <h3>Miere de Tei</h3>
+                    <p>
+                        Rezultatul este o miere de culoare galben- aurie cu un gust dulce intens și un parfum inconfundabil, ușor de recunoscut de celelalte sortimente de miere.
+                        Cât despre vâscozitate, inițial, mierea de tei este foarte lichidă. Totuși aceasta cristalizează intr-un timp foarte scurt, ceea ce înseamnă că mierea este pură și plină de nutrienți sănătoși.
+                         
+                    </p>
+           </div>
+           <div class="produse-col">
+            <img src="images/r1.jpeg">
+            <h3>Miere de Salcâm</h3>
+                <p>
+                    Ea are o culoare foarte clară și o consistență destul de lichidă, fară cristale.
+                    Ce o face mai deosebită față de alte tipuri de miere este mirosul ei dulce și floral și gustul său dulce și delicat. Ea cristalizează printr-un proces încet care durează aproximativ 1-2 ani de la extracție.
+       
+                </p>
+            </div>
+           
+                <div class="produse-col">
+                     <img src="images/Decebal.JPG">
+                     <h3>Miere Polifloră</h3>
+                         <p>
+                            Mierea polifloră este de o calitate superioară și este considerată a fi o miere complexă, deoarece se obține din nectarul mai multor specii de plante. 
+                            Pe principiul „unde-s mulți, puterea crește”, mierea polifloră are o putere terapeutică mult mai mare decât celelalte sortimente de miere de albine.              
+                                 
+                         </p>
+                </div>
+        </div>
+        
+    </section>
+
+
+
+ <section class="footer">
+    <h4>Despre Noi</h4>
+    <p>Din pasiunea pentru creșterea albinelor am realizat produse de calitate, 100% bio și parfumat de gustoase. <br> Acest gust reprezintă "acasă",  Acasă la Petriș!  </p>
+<div class="icons">
+    <i class="fa fa-facebook"></i>
+    <i class="fa fa-twitter"></i>
+    <i class="fa fa-instagram"></i>
+    <i class="fa fa-linkedin"></i>
+
+</div> 
+<p>Made with <i class="fa fa-heart-o"></i> by Miere De Petriș</p>
+
+</section>
+
+
+
+    <!--------JavaScript for Toggle Menu --->
+    <script>
+        var navLinks=document.getElementById("navLinks");
+        function showMenu(){
+            navLinks.style.right = "0";
+
+        }
+        function hideMenu(){
+            navLinks.style.right="-200px";
+        }
+    </script>
+    <script>
+        var icon= document.getElementById("icon");
+
+        icon.onclick = function(){
+            document.body.classList.toggle("dark-theme");
+            if(document.body.classList.contains("dark-theme")){
+                icon.src = "images/sun.png";
+            }
+            else 
+            {
+                icon.src = "images/moon.png";
+            }
+        }
+    </script>
+    </body>
+</html>

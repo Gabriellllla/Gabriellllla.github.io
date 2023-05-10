@@ -70,31 +70,31 @@
             </div>
         </div>
         <div class="contact-col">
-             <form>
+             <form  action="form-handler.php" method="post">
                 <i class="fas fa-paper-plane"></i>
                 <div class="input-group">
                     <label>Nume Prenume</label>
-                    <input type="text" placeholder="Numele tău" id="contact-name" onkeyup="validateName()" >
+                    <input type="text" placeholder="Numele tău" id="contact-name" name="name" onkeyup="validateName()" >
                     <span id="name-error"></span>
                 </div>
 
                 <div class="input-group">
                     <label>Telefon</label>
-                    <input type="tel" placeholder="073 456 7869" id="contact-phone" onkeyup="validatePhone()">
+                    <input type="tel" placeholder="073 456 7869" id="contact-phone" name="phone" onkeyup="validatePhone()">
                     <span id="phone-error"></span>
               
                 </div>
 
                 <div class="input-group">
                     <label>Email</label>
-                    <input type="email" placeholder="Adresa de Email"  id="contact-email" onkeyup="validateEmail()" >
+                    <input type="email" placeholder="Adresa de Email"  id="contact-email" name="email" onkeyup="validateEmail()" >
                     <span id="email-error"></span>
               
                 </div>
 
                 <div class="input-group">
                     <label>Mesajul Tău</label>
-                    <textarea rows="5" placeholder="Mesajul tău"  id="contact-message" onkeyup="validateMessage()" ></textarea>
+                    <textarea rows="5" placeholder="Mesajul tău"  id="contact-message" name="message" onkeyup="validateMessage()" ></textarea>
                     <span id="message-error"></span>
               
                </div>

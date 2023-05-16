@@ -42,8 +42,8 @@
         <p>Toate fiind recoltate din stupina proprie</p>
 
         <div class="row">
-           <div class="produse-col">
-                <img src="images/dulce1.jpeg">
+           <div class="produse-col" data-clicks="0">
+                <img src="images/dulce1.jpeg" alt="">
                 <h3>Miere de Tei</h3>
                     <p>
                         Rezultatul este o miere de culoare galben- aurie cu un gust dulce intens și un parfum inconfundabil, ușor de recunoscut de celelalte sortimente de miere.
@@ -51,8 +51,8 @@
                          
                     </p>
            </div>
-           <div class="produse-col">
-            <img src="images/r1.jpeg">
+           <div class="produse-col" data-clicks="0">
+            <img src="images/r1.jpeg" alt="">
             <h3>Miere de Salcâm</h3>
                 <p>
                     Ea are o culoare foarte clară și o consistență destul de lichidă, fară cristale.
@@ -61,8 +61,8 @@
                 </p>
             </div>
            
-                <div class="produse-col">
-                     <img src="images/Decebal.JPG">
+                <div class="produse-col" data-clicks="0">
+                     <img src="images/Decebal.JPG" alt="">
                      <h3>Miere Polifloră</h3>
                          <p>
                             Mierea polifloră este de o calitate superioară și este considerată a fi o miere complexă, deoarece se obține din nectarul mai multor specii de plante. 
@@ -116,6 +116,32 @@
                 icon.src = "images/moon.png";
             }
         }
+    </script>
+         <script>
+        var containers = document.querySelectorAll('.produse-col');
+
+containers.forEach(function (container) {
+    var image = container.querySelector('img');
+    var clickCount = parseInt(container.dataset.clicks || 0);
+
+    image.addEventListener('click', function () {
+        container.dataset.clicks = ++clickCount;
+        sortContainers();
+    });
+});
+
+function sortContainers() {
+    var containerArray = Array.from(containers);
+
+    containerArray.sort(function (a, b) {
+        return (parseInt(b.dataset.clicks) || 0) - (parseInt(a.dataset.clicks) || 0);
+    });
+
+    var parent = containerArray[0].parentNode;
+    containerArray.forEach(function (container) {
+        parent.appendChild(container);
+    });
+}
     </script>
     </body>
 </html>
